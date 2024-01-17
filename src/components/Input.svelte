@@ -8,8 +8,6 @@
                 const maxId = currentTodos.length > 0 
                     ? Math.max(...currentTodos.map(todo => todo.id))
                     : 0;
-
-                console.log(maxId);
                 return [...currentTodos, { id: maxId + 1, text: newTodo, completed: false }];
             });
             newTodo = "";

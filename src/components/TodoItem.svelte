@@ -22,7 +22,7 @@
 <div  class={`w-full bg-[#313131] text-white p-4 flex items-center justify-between ${todo.completed ? "opacity-50" : ""}`}>
     <div>
         <h1>{todo.text}</h1>
-        <p class="text-sm font-thin">Sun 17 2019</p>
+        <p class="text-sm font-thin">{todo.date}</p>
     </div>
     <div class="items-center flex justify-center gap-3">
         <input bind:checked={todo.completed} on:click={updateCheck}  type="checkbox" class="w-5 h-5" />

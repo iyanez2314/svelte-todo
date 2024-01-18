@@ -12,7 +12,7 @@
             Todos ({$todoCount})
         {/if}
     </h1>
-    <div class="bg-[#ffff] w-[300px] h-[400px] overflow-hidden ">
+    <div class="bg-[#ffff] w-[300px] h-[400px] overflow-auto ">
         {#each list as item (item.id)}
             <TodoItem todo={item}/>
         {/each}

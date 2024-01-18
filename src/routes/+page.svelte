@@ -26,16 +26,6 @@
     <TodoContainer list={done} doneList={isDoneList} />
 
     </div>
-   
-
-
-
-
-
-
-
-
-
 </div>
 
 

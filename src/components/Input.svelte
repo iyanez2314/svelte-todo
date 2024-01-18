@@ -1,6 +1,10 @@
 <script>
     import { todoList } from "../stores/index.js";
     let newTodo;
+    let today = new Date();
+    let formattedDate = ((today.getMonth() + 1) + '').padStart(2, '0') + '/' + 
+                    (today.getDate() + '').padStart(2, '0') + '/' + 
+                    today.getFullYear();
 
     function addTodo() {
         if (newTodo) {
@@ -8,7 +12,7 @@
                 const maxId = currentTodos.length > 0 
                     ? Math.max(...currentTodos.map(todo => todo.id))
                     : 0;
-                return [...currentTodos, { id: maxId + 1, text: newTodo, completed: false }];
+                return [...currentTodos, { id: maxId + 1, text: newTodo, completed: false, date: formattedDate  }];
             });
             newTodo = "";
         }
